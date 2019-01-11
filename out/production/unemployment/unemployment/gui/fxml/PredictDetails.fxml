@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="515.0" prefWidth="415.0" stylesheets="@DarkTheme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="unemployment.gui.PredictDetails">
+   <children>
+      <SplitPane dividerPositions="0.87" orientation="VERTICAL" styleClass="background" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <items>
+            <AnchorPane prefHeight="408.0">
+               <children>
+                  <TableView fx:id="predictTable" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="408.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <columns>
+                        <TableColumn fx:id="yearColumn" prefWidth="70.0" text="Year" />
+                        <TableColumn fx:id="actualColumn" prefWidth="115.0" text="Actual Value" />
+                        <TableColumn fx:id="predictColumn" prefWidth="120.0" text="Predict Value" />
+                        <TableColumn fx:id="diffColumn" prefWidth="100.0" text="Diff" />
+                     </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </children>
+            </AnchorPane>
+            <AnchorPane maxHeight="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="57.0" prefWidth="415.0">
+               <children>
+                  <Label layoutX="7.0" layoutY="2.0" prefHeight="25.0" prefWidth="107.0" text="AFER (%) =" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="10.0" />
+                  <Label fx:id="afer" layoutX="144.0" layoutY="35.0" text="Label" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="100.0" />
+                  <Label layoutX="173.0" layoutY="14.0" text="Computation Time (ms) =" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" />
+                  <Label fx:id="computeTime" layoutX="180.0" layoutY="31.0" text="Label" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="195.0" />
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
